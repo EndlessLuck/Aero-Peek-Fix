@@ -1,5 +1,6 @@
 As you can tell by the name this program will fix Aero Peek in a very sloppy way. Normally in Windows 10(1903+) 
-![resim](https://github.com/EndlessLuck/Aero-Peek-Fix/assets/64068157/759024ee-1be6-467e-9a5a-d0430dad6a14)
+![resim](https://github.com/EndlessLuck/Aero-Peek-Fix/assets/64068157/1e96e6ad-6d6b-4f70-97cb-8acd69e2620f)
+
 
 Aero Peek will be broken unless there is a window maximized. 
 This program creates a maximized window that is both invisible and click-through resulting in Aero Peek being fixed?
