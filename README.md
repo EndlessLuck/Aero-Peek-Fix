@@ -1,4 +1,4 @@
-As you can tell by the name this program will fix Aero Peek in a very sloppy way. Normally in Windows 10(1903+) 
+As you can tell by the name this program will fix Aero Peek in a very sloppy way. Normally in later Windows 10 versions(1903+) 
 ![resim](https://github.com/EndlessLuck/Aero-Peek-Fix/assets/64068157/1e96e6ad-6d6b-4f70-97cb-8acd69e2620f)
 
 
