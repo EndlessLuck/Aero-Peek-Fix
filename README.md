@@ -5,4 +5,5 @@ Aero Peek will be broken unless there is a maximized window above everything.
 
 This program creates a maximized window that is both invisible and click-through resulting in Aero Peek being fixed?
 ![resim](https://github.com/EndlessLuck/Aero-Peek-Fix/assets/64068157/71da6b0e-7307-4f72-889c-cf7ebd5e6ff0)
+You can run it as a scheduled task to make it run when your computer starts.
 This is a very sloppy fix so if you can improve it please do.
