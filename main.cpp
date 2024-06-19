@@ -2,23 +2,22 @@
 
 LRESULT CALLBACK WndProc(HWND, UINT, WPARAM, LPARAM);
 
-// hi mio
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
 {
-    // register window
+    HWND hwndConsole = GetConsoleWindow();
+    ShowWindow(hwndConsole, SW_HIDE);
+
     const char CLASS_NAME[] = "TransparentWindowClass";
 
     WNDCLASS wc = { };
-
     wc.lpfnWndProc   = WndProc;
     wc.hInstance     = hInstance;
     wc.lpszClassName = CLASS_NAME;
 
     RegisterClass(&wc);
 
-    // window man
     HWND hwnd = CreateWindowEx(
-        WS_EX_LAYERED | WS_EX_TRANSPARENT | WS_EX_TOPMOST | WS_EX_TOOLWINDOW,
+        WS_EX_LAYERED | WS_EX_TRANSPARENT | WS_EX_TOOLWINDOW,
         CLASS_NAME,
         "Transparent Window",
         WS_POPUP,
@@ -33,13 +32,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
     {
         return 0;
     }
-
-    // make it full
     ShowWindow(hwnd, SW_SHOWMAXIMIZED);
-
-    // transparent boi
     SetLayeredWindowAttributes(hwnd, 0, 0, LWA_ALPHA);
-
     MSG msg = { };
     while (GetMessage(&msg, NULL, 0, 0))
     {
@@ -70,5 +64,6 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
         case WM_ERASEBKGND:
             return 1;
     }
+
     return DefWindowProc(hwnd, uMsg, wParam, lParam);
 }
